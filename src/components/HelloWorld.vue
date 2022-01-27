@@ -1,6 +1,6 @@
 <template>
   <div class="hello">
-    <h1>{{ msg }}</h1>
+    <h1 class="text-3xl font-bold underline">{{ msg }}</h1>
     <p>
       For a guide and recipes on how to configure / customize this project,<br>
       check out the
@@ -27,7 +27,13 @@
       <li><a href="https://vue-loader.vuejs.org" target="_blank" rel="noopener">vue-loader</a></li>
       <li><a href="https://github.com/vuejs/awesome-vue" target="_blank" rel="noopener">awesome-vue</a></li>
     </ul>
+    <div class="bg-purple text-white sm:bg-green md:bg-blue md:text-yellow lg:bg-red xl:bg-orange ...">
+      Test
+    </div>
   </div>
+  <h1 class="text-3xl font-bold underline">
+    Hello world!
+  </h1>
 </template>
 
 <script>
