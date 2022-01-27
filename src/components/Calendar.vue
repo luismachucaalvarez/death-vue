@@ -12,6 +12,7 @@
 
 <script>
 import { Calendar } from 'v-calendar';
+import axios from "axios";
 
 export default {
   components:{
@@ -42,8 +43,11 @@ export default {
   methods: {
     onDayClick(day) {
       this.selectedDay = day;
-      let availableHours = ['09:00','10:00', '11:00'];
+      let availableHours = ['09:00','10:00', '11:00', '12:00', '13:00', '14:00', '15:00', '16:00', '17:00'];
+      axios.get('https://death-api-im7m6.ondigitalocean.app/api/appointments')
+          .then(response => this.available = response.data)
       console.log(availableHours);
+      console.log(this.available);
       /*const idx = this.days.findIndex(d => d.id === day.id);
       if (idx >= 0) {
         this.days.splice(idx, 1);
